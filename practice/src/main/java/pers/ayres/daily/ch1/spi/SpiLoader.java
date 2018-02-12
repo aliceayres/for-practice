@@ -1,6 +1,4 @@
-package pers.ayres.daily.ch1.spi.factory;
-
-import pers.ayres.daily.ch1.spi.Spi;
+package pers.ayres.daily.ch1.spi;
 
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;

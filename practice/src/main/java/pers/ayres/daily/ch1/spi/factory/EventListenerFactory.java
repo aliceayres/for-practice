@@ -1,5 +1,7 @@
 package pers.ayres.daily.ch1.spi.factory;
 
+import pers.ayres.daily.ch1.spi.SpiLoader;
+
 import java.util.function.Supplier;
 
 /**
