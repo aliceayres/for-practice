@@ -1,6 +1,6 @@
-### mpush-boot
+# mpush-boot
 
-##### Main
+## Main
 
 - ServerLauncher
 ```
@@ -22,7 +22,7 @@ addHook(ServerLauncher launcher) {
         );
 }
 ```
-##### ServerLaucher
+## ServerLaucher
 - 初始化
 ```
 init(){
@@ -45,7 +45,7 @@ stop(){
     chain.stop();
 }
 ```
-##### BootChain
+## BootChain
 
 - 实例化
 ```
@@ -112,7 +112,7 @@ public BootChain setNext(Supplier<BootJob> next, boolean enabled) {
     } 
 ```
 enable选项支持配置
-##### BootJob
+## BootJob
 
 抽象类
 ```
@@ -125,7 +125,7 @@ protected abstract void stop();
 可以优化写法将startNext()等写到统一位置，但是需要考虑异步成功场景
 
 mpush-tools 配置方法类  com.mpush.tools.config.CC 
-##### CacheManagerBoot
+## CacheManagerBoot
 
 缓存模块
 
@@ -140,7 +140,7 @@ CacheManagerFactory.create().destroy();
 涉及到mpush-spi中CacheManagerFactory和CacheManager
 
 具体实现在mpush-cache中
-##### ServiceRegistryBoot和ServiceDiscoveryBoot 
+## ServiceRegistryBoot和ServiceDiscoveryBoot 
 
 服务注册与发现
 
@@ -156,7 +156,7 @@ ServiceRegistryFactory.create().syncStop();
 
 具体实现在mpush-zk中
 
-##### RouterCenterBoot
+## RouterCenterBoot
 
 路由中心 RouterCenter
 
@@ -173,14 +173,14 @@ public MPushServer() {
     }
 ```
 具体实现在mpush-core中com.mpush.core.router
-##### PushCenterBoot
+## PushCenterBoot
 
 推送中心 PushCenter
 
 类似上述RouterCenterBoot
 
 具体实现在mpush-core中com.mpush.core.push
-##### HttpProxyBoot
+## HttpProxyBoot
 
 Http代理
 
@@ -194,14 +194,14 @@ HttpClient → NettyHttpClient（位于mpush-netty）
 涉及到mpush-spi中的DnsMapping和DnsMappingFactory
 
 具体实现在mpush-common中 com.mpush.common.net
-##### MonitorBoot
+## MonitorBoot
 
 监控服务 MonitorService
 
 类似上述RouterCenterBoot
 
 具体实现在mpush-monitor中
-##### ServerBoot
+## ServerBoot
 
 注册发现相关的服务，包括以下服务：
 
@@ -278,14 +278,14 @@ default String nodePath() {
     }
 ```
 节点信息获取类 ServerNodes
-##### MPushServer
+## MPushServer
 
 包含上述核心服务以及ReusableSessionManager、GatewayUDPConnector
 
 MPushServer实现接口MPushContext，可以获取横向基础服务，包括注册发现、MQ、缓存、监控服务
-##### ServerEventListener
+## ServerEventListener
 
-##### AtomicReference
+## AtomicReference
 
-##### EventBus
+## EventBus
 
