@@ -2,8 +2,8 @@ package pers.ayres.daily.ch1.common.manager;
 
 import pers.ayres.daily.ch1.spi.event.SuccessEvent;
 import pers.ayres.daily.ch1.spi.factory.EventListener;
-import pers.ayres.daily.ch1.spi.manager.LogicManager;
 import pers.ayres.daily.ch1.spi.factory.EventListenerFactory;
+import pers.ayres.daily.ch1.spi.manager.LogicManager;
 
 /**
  * Created by Ye on 2018/2/12.
