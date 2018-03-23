@@ -1,5 +1,6 @@
 package pers.ayres.daily.ch2;
 
+import com.google.common.base.Strings;
 import pers.ayres.daily.ch1.spi.Spi;
 
 import java.util.*;
@@ -22,7 +23,10 @@ public final class SpiLoader {
 
     @SuppressWarnings("unchecked")
     public static <T> T load(Class<T> clazz, String name) {
-        String key = clazz.getName()+":"+name;
+        String key = clazz.getName();
+        if(!Strings.isNullOrEmpty(name)){
+            key = key+":"+name;
+        }
         Object o = CACHE.get(key);
         if (o == null) {
             T t = load0(clazz, name);
